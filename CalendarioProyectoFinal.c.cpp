@@ -54,7 +54,7 @@ int main(){
 	
 	printf("\nDo\tLu\tMar\tMier\tJue\tVier\tSab\n");
 	
-	semana = ((anio-1)%7+((anio-1)/4-(3*((anio-1)/100+1)/4))%7+anio&total_mes+1%7)%7;
+	semana = ((anio-1)%7+((anio-1)/4-(3*((anio-1)/100+1)/4))%7+(mes%anio)+1%7)%7;
 	
 		for(m=0; m<semana; m++)
 		printf("\t");
@@ -114,7 +114,7 @@ int main(){
 	
 	printf("\nDo\tLu\tMar\tMier\tJue\tVier\tSab\n");
 	
-	semana = ((anio-1)%7+((anio-1)/4-(3*((anio-1)/100+1)/4))%7+anio%total_mes+1%7)%7;
+	semana = ((anio-1)%7+((anio-1)/4-(3*((anio-1)/100+1)/4))%7+(mes%anio)+1%7)%7;
 	
 		for(m=0; m<semana; m++)
 		printf("\t");
